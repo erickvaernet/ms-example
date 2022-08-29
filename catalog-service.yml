@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:8084}
+
+spring:
+  application:
+    name: catalog-service
+ 
+info:
+  app:
+    name: catalog-service
+    description: Catalog Service
+    version: 1.0.0
