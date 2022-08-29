@@ -1,1 +1,15 @@
 global-mesagge: its works
+
+spring:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  info:
+    env:
+      enabled: true
