@@ -1,0 +1,21 @@
+server:
+  port: 8085
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - name: InfoFilter
+      routes:
+        - id: movieRoute 
+          uri: lb://movie-service 
+          predicates: 
+            - Path=/movies/**
+        - id: catalogRoute 
+          uri: lb://catalog-service 
+          predicates: 
+            - Path=/catalogs/**
+info:
+  app:
+    name: gateway-service
+    description: Gateway Service created for Parcial
+    version: 1.0.0
