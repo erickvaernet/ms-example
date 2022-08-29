@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:8083}
+
+spring:
+  application:
+    name: movie-service
+ 
+info:
+  app:
+    name: movie-service
+    description: Movie Service
+    version: 1.0.0
